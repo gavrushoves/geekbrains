@@ -1,11 +1,11 @@
 @import fonts
 @import colors
+@import fontello
 
 html
 	font-size: 10px
 .container-main
-	border: 1px solid black
-	max-width: 136.6rem
+	max-width: 100vw
 	
 	margin: 0 auto
 body
@@ -28,7 +28,7 @@ body
 		span
 			text-transform: uppercase
 			color: #43a047
-			font-size: 2rem
+			font-size: 1.8rem
 			font-weight: 700
 		h2
 			color:  #212121
@@ -37,6 +37,7 @@ body
 			text-transform: uppercase
 			letter-spacing: -3px
 			margin: 0
+			margin-top: 1.5rem
 		p
 			color:  #6c6c6c
 			font-size: 1.4rem
@@ -58,29 +59,38 @@ body
 			letter-spacing: 3px
 			&:focus
 				outline: 0
+			&:active 
+				box-shadow: 0px 0px 4.85px 0.15px 
+				top: 2px
+				position: relative
+
 			&:hover
 				background-color: #9dc0c6
 				cursor: pointer
 				box-shadow: 1px 2px 4.85px 0.15px lighten(black, 30%)
 	&__pagination
 		display: flex
+		align-items: center
 		bottom: 2rem
 		left: 50%
 		transform: translateX(-50%)
 		position: absolute
+		.circle:hover
+			box-shadow: 0px 2px 4.85px 0.15px grey
+			background-color:  #212121
 		.grey-circle
 			border-radius: 50%
 			background-color:  rgba(33, 33, 33, 0.2)
-			width: 4rem
-			height: 4rem
-
+			width: 3rem
+			height: 3rem
 		.black-circle
 			border-radius: 50%
 			background-color:  #212121
 			width: 4rem
 			height: 4rem
 			margin-left: 1rem
-			margin-right: 1rem				
+			margin-right: 1rem	
+
 
 // Header
 .header
@@ -103,6 +113,8 @@ body
 		img
 			width: 18.5rem
 			height: 2.2rem
+		&:hover 
+			box-shadow: 0px 2px 4.85px 0.15px grey	
 
 	// Меню навигации
 	&__navigation
@@ -145,6 +157,10 @@ body
 		display: inline-block
 		padding: 0.5rem 0.5rem 0 0.5rem
 		margin-top: 0.1rem
+		border-radius: 1rem
+		&:hover 
+			box-shadow: 1px 2px 4.85px 0.15px grey
+
 
 // Section featured-product
 .featured-product
@@ -155,11 +171,14 @@ body
 	box-sizing: border-box
 	.featured-new
 		a
-			padding: 0
+			padding: 0		
 	&__head
 		display: flex
 		align-items: center
 		justify-content: space-between
+		a
+			&:hover
+				text-shadow: 1px 2px 2px grey
 		span 
 			display: inline-block
 			color:  #6c6c6c
@@ -176,6 +195,7 @@ body
 				display: block
 				margin-left: -1rem
 				margin-top: 0.9rem
+
 				
 		// Стили для активного элемента
 		.featured-new-active
@@ -205,7 +225,10 @@ body
 			width: 27rem
 			height: 27rem
 			&:hover .over-bg
-				display: flex	
+				display: flex
+			img
+				width: 27rem
+				height: 27rem	
 		.product-2,
 		.product-3,	
 		.product-4
@@ -213,6 +236,7 @@ body
 
 		// Обертка при ховере
 		.over-bg
+			box-sizing: border-box
 			width: 27rem
 			height: 27rem
 			position: absolute
@@ -244,6 +268,8 @@ body
 				text-decoration: none
 				color: #212121
 				font-size: 2rem
+				&:hover
+					box-shadow: 1px 2px 2px grey
 
 // Section promo-product
 .promo-product
@@ -287,6 +313,8 @@ body
 			letter-spacing: 2px
 			display: inline-block
 			padding: 0.5rem
+			&:hover
+				text-shadow: 1px 2px 2px grey
 		span 
 			text-transform: capitalize
 			color: #212121
@@ -300,7 +328,9 @@ body
 		a
 			width: 37rem
 			height: 37rem	
-			margin-bottom: 3rem	
+			margin-bottom: 3rem
+			&:hover
+				box-shadow: 1px 1px 2px grey	
 			
 // section with slider-second
 .slider-second
@@ -310,5 +340,211 @@ body
 	span
 		color: #e53935
 
+// Секция Product Content
+.exclusive-product
+	box-sizing: border-box
+	display: flex
+	height: 81rem
+	padding-top: 12rem
+	padding-left: 10rem
+	img:hover
+		box-shadow: 1px 2px 2px grey
+	&_sm
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		align-content: space-between
+		margin-left: 3rem
 
-	
+	&_lg, &_sm, &_lg img
+		width: 57rem
+		height: 57rem
+
+	&_sm img
+		width: 27rem
+		height: 27rem
+	&_lg 
+		position: relative
+	&__content
+		position: absolute
+		width: 57rem
+		height: 57rem
+		margin: 0
+		padding: 0
+		padding-top: 18.6rem
+		padding-left: 3.1rem
+		span
+			color: #1e88e5
+			font-size: 1.8rem
+		
+		h2
+			font-size: 3.6rem
+			font-weight: 700
+			margin-top: 1.8rem	
+
+// Секция Mobile App	
+.mobile-app
+	height: 51.6rem
+	background: url(../img/home-page/mobile-app/mobile-app-bg.jpg) center no-repeat
+	background-size: cover
+	padding-top: 12rem
+	padding-left: 10.6rem
+	box-sizing: border-box
+	span
+		color: #6c6c6c
+		font-size: 1.8rem
+		font-weight: 700
+		text-transform: uppercase
+		margin-bottom: 2rem
+	h3
+		color: #212121
+		font-size: 6.2rem
+		font-weight: 100
+		text-transform: uppercase
+		margin: 0
+		margin-bottom: 3rem
+	p 
+		color: #6c6c6c
+		font-size: 2.2rem
+		font-weight: 300
+		margin: 0
+		margin-bottom: 3.5rem
+	a 
+		text-decoration: none
+		
+		
+	img
+		width: 13.5rem
+		height: 4rem
+		&:hover
+				box-shadow: 2px 3px 6px #68AEA8
+				border-radius: .5rem
+		&:active 
+			box-shadow: 2px 3px 6px #15318e					
+			
+	.google-play
+		margin-left: 1rem	
+
+
+// Footer
+.footer 
+	height: 38.4rem	
+	background-color: $footer-bg-color
+	box-sizing: border-box
+	&__content
+		display: flex
+		padding-top: 12rem
+		padding-left: 10.6rem
+		h3
+			color: #6c6c6c
+			font-size: 1.8rem
+			font-weight: 700
+			text-transform: uppercase
+			margin: 0
+		p, a
+			color: #212121
+			font-size: 1.4rem
+			font-weight: 300
+			margin: 0
+			line-height: 2.2rem
+
+		a 
+			text-decoration: none
+			&:hover
+				text-shadow: 1px 2px 2px grey
+				color: #342185
+				
+		p 
+			margin-top: 1.2rem	
+	&__info
+		margin-left: 8rem
+		a
+			text-transform: uppercase
+		li
+			list-style: none
+			color:  #212121
+			font-size: 1.4rem
+			font-weight: 700
+			line-height: 2.6rem
+			&:hover 
+				text-shadow: 1px 2px 2px grey
+				margin-top: 1px
+
+		ul
+			padding: 0
+			&:last-child
+				margin-left: 10.3rem	
+
+		.info-links
+			display: flex		
+	&__offers
+		margin-left: 7.8rem
+		position: relative
+		p 
+			color:  #212121
+			font-size: 1.4rem
+			font-weight: 300
+		input 
+			margin-top: 2.6rem
+			width: 37rem
+			height: 4.8rem	
+			box-sizing: border-box
+			padding: 1.7rem 1.9rem
+			color:  #6c6c6c
+			font-size: 1.4rem
+			font-weight: 300
+			border: 1px solid #d9dee1
+			background-color:  #ffffff
+			&:focus
+				outline: none
+				box-shadow: 1px 2px 2px grey
+				background-color: #68AEA8
+				color: #fff
+			&:hover
+				box-shadow: 1px 1px 1px 2px #7D7D5B	
+		a
+			position: absolute
+			right: 1.9rem
+			bottom: 2.4rem
+			transform: translateY(50%)	
+		
+	&__contacts_links
+		display: flex
+		justify-content: space-between
+		align-items: center	
+		padding-left: 9.8rem
+		padding-right: 9.8rem
+		margin-top: 6.5rem
+	.social-links
+		display: flex
+		a 
+			width: 2.5rem
+			height: 2.5rem
+			text-decoration: none
+			border-radius: 50%
+			background-color: #6c6c6c
+			display: flex
+			justify-content: center
+			align-items: center
+			color: #f7f7f7
+			&:hover
+					box-shadow: 2px 2px 3px #68AEA8
+					
+			&:active 
+				box-shadow: 2px 2px 3px #15318e	
+			&:first-child
+				margin-right: 0.8rem
+			&:last-child
+				margin-left: 0.8rem		
+			&:nth-child(2)	
+				margin-right: 0.8rem
+	.policy
+		a, span, .copy small
+			color: #6c6c6c
+			font-size: 1.2rem
+			font-weight: 700
+			text-decoration: none
+		a, span
+			&:hover
+				text-shadow: 1px 1px 2px grey	
+			
