@@ -1,0 +1,314 @@
+@import fonts
+@import colors
+
+html
+	font-size: 10px
+.container-main
+	border: 1px solid black
+	max-width: 136.6rem
+	
+	margin: 0 auto
+body
+	box-sizing: border-box
+	font-family: 'Montserrat', sans-serif
+	font-weight: 700
+	box-sizing: border-box
+
+// Section with slider first
+.slider
+	position: relative
+	width: 100%
+	height: 80rem
+	background: url(../img/home-page/slider-1.jpg) center no-repeat
+	background-size: cover
+	&__content
+		padding-left: 9.7rem
+		padding-right: 9.7rem
+		margin-top: 25.9rem
+		span
+			text-transform: uppercase
+			color: #43a047
+			font-size: 2rem
+			font-weight: 700
+		h2
+			color:  #212121
+			font-size: 6.2rem
+			font-weight: 100
+			text-transform: uppercase
+			letter-spacing: -3px
+			margin: 0
+		p
+			color:  #6c6c6c
+			font-size: 1.4rem
+			font-weight: 300
+			line-height: 24px	
+			margin: 0
+			margin-top: 1.4rem
+		button
+			margin-top: 3rem
+			background-color:  #ffffff
+			box-shadow: 0px 2px 4.85px 0.15px rgba(33, 33, 33, 0.35)
+			color:  #212121
+			font-size: 18px
+			font-weight: 700
+			border-radius: 2.6rem
+			border: none
+			padding: 1.5rem 1.8rem 1.3rem 3.2rem
+			text-transform: uppercase
+			letter-spacing: 3px
+			&:focus
+				outline: 0
+			&:hover
+				background-color: #9dc0c6
+				cursor: pointer
+				box-shadow: 1px 2px 4.85px 0.15px lighten(black, 30%)
+	&__pagination
+		display: flex
+		bottom: 2rem
+		left: 50%
+		transform: translateX(-50%)
+		position: absolute
+		.grey-circle
+			border-radius: 50%
+			background-color:  rgba(33, 33, 33, 0.2)
+			width: 4rem
+			height: 4rem
+
+		.black-circle
+			border-radius: 50%
+			background-color:  #212121
+			width: 4rem
+			height: 4rem
+			margin-left: 1rem
+			margin-right: 1rem				
+
+// Header
+.header
+	display: flex
+	align-items: center
+	justify-content: space-between
+	flex-wrap: wrap
+	padding-top: 3.5rem
+	padding-left: 9.7rem
+	padding-right: 9.7rem
+	&__nav-container
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		margin-right: 6.4rem
+	&__logo
+		width: 18.5rem
+		height: 2.2rem
+		display: inline-block
+		img
+			width: 18.5rem
+			height: 2.2rem
+
+	// Меню навигации
+	&__navigation
+		display: flex
+		align-content: flex-end
+		flex-wrap: wrap
+		list-style: none
+		padding-left: 0
+		font-size: 1.4rem
+		font-weight: 300
+		line-height: 4.8rem
+		a
+			padding-left: 1.7rem
+			padding-right: 1.7rem
+			display: inline-block
+			text-decoration: none
+			color:  $nav-link-color
+			&:hover:after
+				transform: scale(1)
+			&:after
+				content: ""
+				display: block
+				width: 100%
+				transform: scale(0)
+				height: 2px
+				background-color: $nav-link-active-color
+				margin-top: -0.5rem
+				transition: all 0.5s ease
+		li
+			text-transform: uppercase
+
+		// Стили для активного пункта меню
+		.navigation__link_active
+			color: $nav-link-active-color
+			font-weight: 700
+	&__search-icon, &__search-icon img
+		width: 2.5rem
+		height: 2.5rem	
+	&__search-icon 
+		display: inline-block
+		padding: 0.5rem 0.5rem 0 0.5rem
+		margin-top: 0.1rem
+
+// Section featured-product
+.featured-product
+	padding-left: 9.7rem
+	padding-right: 9.7rem
+	padding-top: 11.5rem
+	height: 61rem
+	box-sizing: border-box
+	.featured-new
+		a
+			padding: 0
+	&__head
+		display: flex
+		align-items: center
+		justify-content: space-between
+		span 
+			display: inline-block
+			color:  #6c6c6c
+			text-transform: capitalize
+			font-size: 3.6rem
+			font-weight: 700
+			&:last-child
+				margin-left: 3rem
+			&:after
+				content: ""
+				width: 119%
+				height: 1px
+				background-color: #6c6c6c
+				display: block
+				margin-left: -1rem
+				margin-top: 0.9rem
+				
+		// Стили для активного элемента
+		.featured-new-active
+			color:  #212121
+			&:after
+				content: ""
+				width: 119%
+				height: 3px
+				background-color: #212121
+				display: block
+				margin-left: -1rem
+				margin-top: 0.8rem
+		a
+			text-transform: uppercase
+			font-size: 18px
+			font-weight: 700
+			color: #212121
+			text-decoration: none
+			letter-spacing: 2px
+			display: inline-block
+			padding: 0.5rem
+	.product-box
+		display: flex
+		position: relative
+		margin-top: 5rem
+		.product
+			width: 27rem
+			height: 27rem
+			&:hover .over-bg
+				display: flex	
+		.product-2,
+		.product-3,	
+		.product-4
+			margin-left: 3rem	
+
+		// Обертка при ховере
+		.over-bg
+			width: 27rem
+			height: 27rem
+			position: absolute
+			display: none
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			border: 1px solid #9c9c9c
+			background-color:  #ffffff
+			opacity: 0.9
+			h3
+				color:  #212121
+				font-size: 21.91px
+				font-weight: 700
+			p
+				color:  #6c6c6c
+				font-size: 13.94px
+				font-weight: 300	
+			a
+				display: flex
+				border-radius: 50%
+				background-color:  #ffffff
+				box-shadow: 0px 2px 4.85px 0.15px rgba(33, 33, 33, 0.35)
+				width: 48px
+				height: 48px
+				position: relative
+				justify-content: center
+				align-items: center
+				text-decoration: none
+				color: #212121
+				font-size: 2rem
+
+// Section promo-product
+.promo-product
+	height: 68.3rem
+	display: flex
+	.promo
+		height: 68.3rem
+		width: 68.3rem
+		&-first
+			background: url(../img/home-page/promo-product/promo-img-1.jpg) center no-repeat
+			background-size: cover
+		&-second
+			background: url(../img/home-page/promo-product/promo-img-2.jpg) center no-repeat
+			background-size: cover		
+	&__content
+		span
+			color: #1e88e5
+		h2
+			font-size: 3.6rem
+			font-weight: 700
+			margin-top: 1.8rem	
+
+// Section trendibg-products
+.trending-products
+	height: 111rem
+	display: block
+	padding-left: 9.7rem
+	padding-right: 9.7rem
+	padding-top: 11.5rem
+	box-sizing: border-box
+	&__head
+		display: flex
+		justify-content: space-between
+		align-items: center
+		a
+			text-transform: uppercase
+			font-size: 18px
+			font-weight: 700
+			color: #212121
+			text-decoration: none
+			letter-spacing: 2px
+			display: inline-block
+			padding: 0.5rem
+		span 
+			text-transform: capitalize
+			color: #212121
+			font-size: 36px
+			font-weight: 700
+	&__content
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin-top: 6.5rem
+		a
+			width: 37rem
+			height: 37rem	
+			margin-bottom: 3rem	
+			
+// section with slider-second
+.slider-second
+	background: url(../img/home-page/slider-2.jpg) center no-repeat
+	background-size: cover
+	display: flex
+	span
+		color: #e53935
+
+
+	
